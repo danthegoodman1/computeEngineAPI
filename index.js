@@ -4,7 +4,7 @@ const compute = new Compute({
     keyFilename: './keyFile.json'
 })
 const zone = compute.zone('us-east1-b')
-const name = 'test-api-create-ubuntu7'
+const name = 'instance-1'
 
 const config = {
     os: 'ubuntu',
@@ -41,11 +41,42 @@ const config = {
 //     console.log(err)
 // })
 
-zone.vm(name).getMetadata()
-.then((data) => {
-    // console.log(data[0].metadata)
-    console.log(data[0].networkInterfaces[0].accessConfigs[0].natIP) // the public ip
-})
-.catch((err) => {
-    console.log(err)
-})
+// zone.vm(name).getMetadata()
+// .then((data) => {
+//     console.log(data[0])
+//     // console.log(data[0].networkInterfaces[0].accessConfigs[0].natIP) // the public ip
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
+
+// const fireObj = {
+//     protocols: {
+//         tcp: [8080],
+//         udp: false // An empty array means all ports are allowed.
+//     },
+//     tags: [
+//         'http-server',
+//         'https-server'
+//     ]
+// }
+
+// compute.createFirewall('testnameer', fireObj)
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
+
+// const newobj = {
+//     allowed: [ { IPProtocol: 'tcp', ports: ['8080', '9999'] } ],
+// }
+
+// compute.firewall('testnameer').setMetadata(newobj)
+// .then((data) => {
+//     console.log(data)
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
