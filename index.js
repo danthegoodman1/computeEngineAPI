@@ -80,3 +80,5 @@ const config = {
 // .catch((err) => {
 //     console.log(err)
 // })
+
+// Can build something in the gui then click REST equivalent at bottom to get an idea, sometimes it is different though
