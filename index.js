@@ -34,6 +34,7 @@ zone.createVM(name, config)
         'demoCustom1': 'This is custom 1',
         'demoCustom2': 'This is custom 2'
     }
+    // get with http://metadata.google.internal/computeMetadata/v1/instance/attributes/demoCustom1
     return zone.vm(name).setMetadata(setMeta)
 })
 .then(() => {
